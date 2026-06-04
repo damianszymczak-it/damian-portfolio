@@ -79,8 +79,8 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <div className="grid gap-6 md:grid-cols-4">
           <div className="rounded-2xl border border-blue-950 p-8">
-            <h3 className="text-5xl font-bold text-blue-400">4+</h3>
-            <p className="mt-2 text-gray-400">lata doświadczenia IT</p>
+            <h3 className="text-5xl font-bold text-blue-400">5+</h3>
+            <p className="mt-2 text-gray-400">lat doświadczenia IT</p>
           </div>
 
           <div className="rounded-2xl border border-blue-950 p-8">
@@ -104,11 +104,20 @@ export default function Home() {
         <h2 className="mb-8 text-4xl font-bold text-blue-400">O mnie</h2>
 
         <p className="text-lg leading-9 text-gray-300">
-          Na co dzień pracuję jako IT Systems Support Specialist, wspierając
-          infrastrukturę działającą w trybie 24/7. Zajmuję się monitoringiem
-          systemów, analizą incydentów, priorytetyzacją zgłoszeń oraz wsparciem
-          użytkowników końcowych. Interesuję się administracją systemami Windows,
-          automatyzacją, PowerShellem, AI oraz technologiami chmurowymi.
+          Pracuję w obszarze IT Operations i Service Desk L1/L2, wspierając
+          środowisko produkcyjne działające w trybie 24/7. Zajmuję się
+          monitoringiem infrastruktury, analizą incydentów, priorytetyzacją
+          zgłoszeń P1–P4, eskalacjami oraz współpracą z zespołami technicznymi
+          i dostawcami zewnętrznymi.
+        </p>
+
+        <p className="mt-6 text-lg leading-9 text-gray-300">
+          Dodatkowo uczestniczę w projekcie wdrażania rozwiązań AI wspierających
+          Service Desk i infolinię. Testuję scenariusze, weryfikuję jakość
+          odpowiedzi AI, zgłaszam błędy do dostawcy oraz przygotowuję instrukcje
+          i bazę wiedzy, na której AI może opierać odpowiedzi dla użytkowników.
+          Celem projektu jest skrócenie obsługi powtarzalnych problemów bez
+          konieczności rozmowy z konsultantem.
         </p>
       </section>
 
@@ -129,6 +138,9 @@ export default function Home() {
             "Git",
             "GitHub",
             "Hyper-V",
+            "AI Service Desk",
+            "Knowledge Base",
+            "Vendor Feedback",
           ].map((skill) => (
             <div
               key={skill}
@@ -162,6 +174,8 @@ export default function Home() {
               <li>• Praca w środowisku produkcyjnym 24/7</li>
               <li>• Jira, Zabbix, Xeelo, PCS Telemetria, TapNet</li>
               <li>• Eskalacja awarii i współpraca z zespołami technicznymi</li>
+              <li>• Udział w pilotażu rozwiązań AI dla Service Desk i infolinii</li>
+              <li>• Testowanie scenariuszy AI, zgłaszanie błędów i walidacja bazy wiedzy</li>
             </ul>
           </div>
 
@@ -186,24 +200,80 @@ export default function Home() {
       <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="mb-10 text-4xl font-bold text-blue-400">Projekty</h2>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           <div className="rounded-2xl border border-blue-950 p-8">
-            <h3 className="mb-4 text-2xl font-bold">Portfolio Website</h3>
+            <h3 className="mb-4 text-2xl font-bold">
+              AI Service Desk Assistant
+            </h3>
 
-            <p className="leading-8 text-gray-300">
-              Portfolio stworzone w Next.js, hostowane na Vercel, z wykorzystaniem
-              GitHub do kontroli wersji. Projekt pokazuje podstawy pracy z
-              repozytorium, wdrożeniem i publiczną prezentacją kompetencji.
+            <p className="mb-6 leading-8 text-gray-300">
+              Udział w projekcie wdrażania rozwiązań AI wspierających Service
+              Desk oraz infolinię. Testowanie scenariuszy, weryfikacja jakości
+              odpowiedzi AI, zgłaszanie błędów do dostawcy oraz przygotowywanie
+              instrukcji i bazy wiedzy wykorzystywanej przez AI do rozwiązywania
+              problemów zgłaszanych przez użytkowników.
             </p>
+
+            <div className="flex flex-wrap gap-2">
+              {["AI", "Service Desk", "Knowledge Base", "Voicebot", "Vendor Feedback"].map(
+                (tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-blue-900 px-3 py-1 text-sm text-blue-300"
+                  >
+                    {tag}
+                  </span>
+                )
+              )}
+            </div>
           </div>
 
           <div className="rounded-2xl border border-blue-950 p-8">
-            <h3 className="mb-4 text-2xl font-bold">Home Lab (w budowie)</h3>
+            <h3 className="mb-4 text-2xl font-bold">
+              Raspberry Candle E-commerce
+            </h3>
+
+            <p className="mb-6 leading-8 text-gray-300">
+              Projekt e-commerce wykorzystujący Shoper, Google Analytics 4,
+              Meta Pixel, TikTok Pixel, Make.com, automatyzacje procesów,
+              integracje oraz analitykę danych. Projekt łączy techniczne
+              wdrożenie sklepu online z konfiguracją narzędzi marketingowych
+              i procesów biznesowych.
+            </p>
+
+            <div className="flex flex-wrap gap-2">
+              {["Shoper", "GA4", "Meta Pixel", "TikTok Pixel", "Make.com", "E-commerce"].map(
+                (tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-blue-900 px-3 py-1 text-sm text-blue-300"
+                  >
+                    {tag}
+                  </span>
+                )
+              )}
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-blue-950 p-8">
+            <h3 className="mb-4 text-2xl font-bold">Home Lab Infrastructure</h3>
 
             <p className="leading-8 text-gray-300">
               Środowisko testowe rozwijane pod administrację systemami: Windows
               Server, Active Directory, DNS, DHCP, GPO, PowerShell oraz
-              wirtualizacja.
+              wirtualizacja. Projekt ukierunkowany na rozwój w stronę Windows
+              Administrator / Infrastructure Support.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-blue-950 p-8">
+            <h3 className="mb-4 text-2xl font-bold">Portfolio Website</h3>
+
+            <p className="leading-8 text-gray-300">
+              Portfolio stworzone w Next.js, hostowane na Vercel, z
+              wykorzystaniem GitHub do kontroli wersji. Projekt pokazuje
+              podstawy pracy z repozytorium, wdrożeniem i publiczną prezentacją
+              kompetencji.
             </p>
           </div>
         </div>
