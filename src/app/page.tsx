@@ -200,7 +200,7 @@ export default function Home() {
       <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="mb-10 text-4xl font-bold text-blue-400">Projekty</h2>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           <div className="rounded-2xl border border-blue-950 p-8">
             <h3 className="mb-4 text-2xl font-bold">
               AI Service Desk Assistant
@@ -253,6 +253,45 @@ export default function Home() {
                 )
               )}
             </div>
+          </div>
+
+          <div className="rounded-2xl border border-blue-950 p-8">
+            <h3 className="mb-4 text-2xl font-bold">
+              Windows Admin Scripts
+            </h3>
+
+            <p className="mb-6 leading-8 text-gray-300">
+              Repozytorium PowerShell stworzone do automatyzacji codziennych
+              zadań administracyjnych. Zawiera skrypty do monitorowania usług,
+              sprawdzania wykorzystania dysków, zbierania informacji o systemie
+              oraz kontroli uptime serwerów Windows.
+            </p>
+
+            <div className="mb-6 flex flex-wrap gap-2">
+              {[
+                "PowerShell",
+                "Windows Server",
+                "Active Directory",
+                "Automation",
+                "GitHub",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-blue-900 px-3 py-1 text-sm text-blue-300"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <a
+              href="https://github.com/damianszymczak-it/windows-admin-scripts"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-blue-400 hover:text-blue-300"
+            >
+              GitHub Repository →
+            </a>
           </div>
 
           <div className="rounded-2xl border border-blue-950 p-8">
