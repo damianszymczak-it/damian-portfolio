@@ -421,7 +421,9 @@ function BulletList({
           key={item}
           className={compact ? "flex gap-3 leading-7" : "flex gap-3 leading-8"}
         >
-          <span className="mt-[1px] shrink-0 text-blue-400">•</span>
+          <span aria-hidden="true" className="mt-[1px] shrink-0 text-blue-400">
+            •
+          </span>
           <span>{item}</span>
         </div>
       ))}
@@ -506,7 +508,7 @@ export default function Home() {
             IT Systems Support Specialist / IT Operations Support
           </h2>
 
-          <p className="max-w-4xl text-xl leading-9 text-gray-300">
+          <p className="max-w-5xl text-xl leading-9 text-gray-300">
             Specjalista IT z ponad 4 latami doświadczenia we wsparciu dużych,
             rozproszonych środowisk IT. Obecnie pracuję przy utrzymaniu
             środowiska 24/7 dla ogólnopolskiej sieci 520+ stacji, obsługując
@@ -560,11 +562,11 @@ export default function Home() {
       </section>
 
       <section id="about" className="mx-auto max-w-7xl px-6 py-20">
-         <SectionTitle
-         eyebrow="Doświadczenie"
-         title="Doświadczenie zawodowe IT"
-         description="Skala środowisk, odpowiedzialność operacyjna i technologie wykorzystywane w pracy IT."
-/>
+        <SectionTitle
+          eyebrow="Profil zawodowy"
+          title="Operacyjne IT, nie tylko klasyczny helpdesk"
+          description="Doświadczenie łączące Service Desk, IT Operations, monitoring, obsługę incydentów, wsparcie użytkowników, elementy administracji Windows Server / Active Directory oraz pracę z danymi i automatyzacją."
+        />
 
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
@@ -661,7 +663,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Doświadczenie"
           title="Doświadczenie zawodowe IT"
-          description="Skala środowisk, zakres odpowiedzialności operacyjnej oraz technologie wykorzystywane w codziennej pracy IT."
+          description="Skala środowisk, odpowiedzialność operacyjna i technologie wykorzystywane w pracy IT."
         />
 
         <div className="space-y-10">
