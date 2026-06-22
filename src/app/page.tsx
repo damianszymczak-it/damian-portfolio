@@ -274,7 +274,13 @@ const projects = [
       "Wsparcie diagnostyki incydentów związanych z systemami sprzedaży i płatnościami.",
       "Łączenie informacji z systemów, zgłoszeń i danych technicznych.",
     ],
-    tags: ["SQL", "Diagnostyka", "IT Operations", "Dane operacyjne", "Incident Analysis"],
+    tags: [
+      "SQL",
+      "Diagnostyka",
+      "IT Operations",
+      "Dane operacyjne",
+      "Incident Analysis",
+    ],
   },
   {
     title: "Home Lab — monitoring, VM, NAS i diagnostyka",
@@ -621,6 +627,7 @@ export default function Home() {
               <h3 className="mb-5 text-xl font-bold text-blue-400">
                 {group.title}
               </h3>
+
               <TagList items={group.items} />
             </div>
           ))}
@@ -643,6 +650,7 @@ export default function Home() {
               <h3 className="mb-5 text-2xl font-bold text-blue-400">
                 {area.title}
               </h3>
+
               <BulletList items={area.points} />
             </div>
           ))}
@@ -667,9 +675,11 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-blue-400">
                     {experience.role}
                   </h3>
+
                   <p className="mt-2 text-xl font-semibold">
                     {experience.company}
                   </p>
+
                   <p className="mt-3 max-w-4xl leading-8 text-gray-300">
                     {experience.description}
                   </p>
@@ -690,6 +700,7 @@ export default function Home() {
                     <h4 className="mb-4 text-lg font-bold text-blue-300">
                       {group.title}
                     </h4>
+
                     <BulletList items={group.points} compact />
                   </div>
                 ))}
@@ -721,11 +732,13 @@ export default function Home() {
                   <h4 className="mb-3 font-bold text-blue-300">
                     Kontekst / problem
                   </h4>
+
                   <p className="leading-7 text-gray-300">{project.context}</p>
                 </div>
 
                 <div className="rounded-xl border border-blue-950 bg-[#020817] p-5">
                   <h4 className="mb-3 font-bold text-blue-300">Moja rola</h4>
+
                   <p className="leading-7 text-gray-300">{project.role}</p>
                 </div>
 
@@ -733,6 +746,7 @@ export default function Home() {
                   <h4 className="mb-3 font-bold text-blue-300">
                     Efekt / wartość
                   </h4>
+
                   <p className="leading-7 text-gray-300">{project.effect}</p>
                 </div>
               </div>
@@ -765,6 +779,7 @@ export default function Home() {
               <h3 className="mb-5 text-2xl font-bold text-blue-400">
                 {group.title}
               </h3>
+
               <TagList items={group.items} />
             </div>
           ))}
@@ -807,7 +822,10 @@ export default function Home() {
                 </a>
               </p>
 
-              <p>Lokalizacja: Lublin / zdalnie — cała Polska / hybrydowo — Lublin</p>
+              <p>
+                Lokalizacja: Lublin / zdalnie — cała Polska / hybrydowo —
+                Lublin
+              </p>
             </div>
           </div>
 
