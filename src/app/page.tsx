@@ -395,7 +395,7 @@ function SectionTitle({
       </h2>
 
       {description ? (
-        <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-400">
+        <p className="mt-5 max-w-5xl text-lg leading-8 text-gray-400">
           {description}
         </p>
       ) : null}
@@ -560,11 +560,11 @@ export default function Home() {
       </section>
 
       <section id="about" className="mx-auto max-w-7xl px-6 py-20">
-        <SectionTitle
-          eyebrow="Profil zawodowy"
-          title="Operacyjne IT, nie tylko klasyczny helpdesk"
-          description="Doświadczenie łączące Service Desk, IT Operations, monitoring, obsługę incydentów, wsparcie użytkowników, elementy administracji Windows Server / Active Directory oraz pracę z danymi i automatyzacją."
-        />
+         <SectionTitle
+         eyebrow="Doświadczenie"
+         title="Doświadczenie zawodowe IT"
+         description="Skala środowisk, odpowiedzialność operacyjna i technologie wykorzystywane w pracy IT."
+/>
 
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
