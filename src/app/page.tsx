@@ -298,13 +298,15 @@ export default function Home() {
             IT Systems Support Specialist
           </h2>
 
-          <p className="max-w-4xl text-xl leading-9 text-gray-300">
-          Specjalista IT z ponad 4 latami doświadczenia w środowiskach produkcyjnych
-          24/7. Obsługuję incydenty P1-P4, monitoring, eskalacje, Windows Server,
-          Active Directory, SQL oraz procesy automatyzacji Service Desk z użyciem AI /
-          voice-bota. Moje doświadczenie łączy wsparcie użytkowników, IT Operations i
-          podstawy administracji systemami Windows.
-         </p>
+          <p className="max-w-5xl text-xl leading-9 text-gray-300">
+            Specjalista IT z ponad 4 latami doświadczenia we wsparciu dużych,
+            rozproszonych środowisk IT. Obecnie pracuję przy utrzymaniu
+            środowiska 24/7 dla ogólnopolskiej sieci 520+ stacji, obsługując
+            incydenty P1-P4, monitoring, eskalacje, Windows Server, Active
+            Directory i SQL. Rozwijam się w stronę IT Operations i administracji
+            systemami Windows, łącząc wsparcie użytkowników, diagnostykę
+            systemów oraz automatyzację Service Desk z użyciem AI / voice-bota.
+          </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
