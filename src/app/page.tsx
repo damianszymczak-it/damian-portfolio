@@ -45,7 +45,7 @@ const coreSkills = [
   "Microsoft 365",
   "Azure / Entra ID - rozwój",
   "AI Service Desk",
-  "Knowledge Base",
+  "Knowledge Base / Baza wiedzy IT",
 ];
 
 const skillGroups = [
@@ -412,7 +412,7 @@ export default function Home() {
                 {group.title}
               </h3>
 
-              <ul className="space-y-3 text-gray-300">
+              <ul className="list-none space-y-3 text-gray-300">
                 {group.items.map((item) => (
                   <li key={item} className="leading-7">
                     <span className="text-blue-400">•</span> {item}
@@ -455,7 +455,7 @@ export default function Home() {
                 {job.description}
               </p>
 
-              <ul className="grid gap-3 text-gray-300 lg:grid-cols-2">
+              <ul className="grid list-none gap-3 text-gray-300 lg:grid-cols-2">
                 {job.bullets.map((bullet) => (
                   <li key={bullet} className="leading-7">
                     <span className="text-blue-400">•</span> {bullet}
@@ -486,7 +486,7 @@ export default function Home() {
 
               <p className="mb-6 leading-8 text-gray-300">{project.text}</p>
 
-              <ul className="mb-6 space-y-2 text-gray-300">
+              <ul className="mb-6 list-none space-y-2 text-gray-300">
                 {project.points.map((point) => (
                   <li key={point} className="leading-7">
                     <span className="text-blue-400">•</span> {point}
@@ -513,54 +513,23 @@ export default function Home() {
         <SectionTitle
           eyebrow="Rozwój"
           title="Kierunek techniczny"
-          description="Nie wpisuję tu fikcyjnych certyfikatów ani pustych haseł. To obszary, które rozwijam pod przejście z klasycznego wsparcia IT w stronę L2, Operations i administracji Windows."
+          description="Aktualnie rozwijam obszary potrzebne do przejścia z klasycznego wsparcia IT w stronę L2, IT Operations i administracji systemami Windows: Windows Server, Active Directory, Microsoft 365, Azure / Entra ID, PowerShell, SQL, monitoring oraz automatyzację pracy Service Desk."
         />
 
-        <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
-            <h3 className="mb-6 text-2xl font-bold text-blue-400">
-              Obszary rozwijane
-            </h3>
+        <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
+          <h3 className="mb-6 text-2xl font-bold text-blue-400">
+            Obszary rozwijane
+          </h3>
 
-            <div className="flex flex-wrap gap-3">
-              {developmentAreas.map((area) => (
-                <span
-                  key={area}
-                  className="rounded-full border border-blue-900 px-4 py-2 text-sm text-blue-300"
-                >
-                  {area}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
-            <h3 className="mb-6 text-2xl font-bold text-blue-400">
-              Języki i edukacja
-            </h3>
-
-            <div className="space-y-5 text-gray-300">
-              <div>
-                <p className="font-semibold text-white">Polski</p>
-                <p>Ojczysty</p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-white">Angielski</p>
-                <p>
-                  A2 - w trakcie intensywnej nauki. Cel: swobodna komunikacja
-                  techniczna i biznesowa w IT.
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-white">Edukacja</p>
-                <p>
-                  Technik Informatyk - Zespół Szkół Nr 1 im. Wł. Grabskiego w
-                  Lublinie
-                </p>
-              </div>
-            </div>
+          <div className="flex flex-wrap gap-3">
+            {developmentAreas.map((area) => (
+              <span
+                key={area}
+                className="rounded-full border border-blue-900 px-4 py-2 text-sm text-blue-300"
+              >
+                {area}
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -606,7 +575,7 @@ export default function Home() {
                 Dostępne materiały
               </h3>
 
-              <ul className="space-y-3 text-gray-300">
+              <ul className="list-none space-y-3 text-gray-300">
                 <li>
                   <span className="text-blue-400">•</span> Klasyczne CV do
                   pobrania w PDF
