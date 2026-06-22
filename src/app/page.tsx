@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export const metadata = {
   title: "Damian Szymczak | IT Support L2 / IT Operations",
   description:
@@ -264,7 +262,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <div>
           <p className="mb-6 font-semibold uppercase tracking-[4px] text-blue-400">
             IT Support L2 / IT Operations / Junior Windows Administrator
@@ -278,7 +276,7 @@ export default function Home() {
             IT Systems Support Specialist
           </h2>
 
-          <p className="max-w-3xl text-xl leading-9 text-gray-300">
+          <p className="max-w-4xl text-xl leading-9 text-gray-300">
             Specjalista IT z ponad 4-letnim doświadczeniem w dużych,
             rozproszonych organizacjach. Pracuję w środowisku 24/7, obsługując
             incydenty P1-P4, monitoring, eskalacje, Windows Server, Active
@@ -309,19 +307,6 @@ export default function Home() {
             >
               Pobierz CV
             </a>
-          </div>
-        </div>
-
-        <div className="flex justify-center lg:justify-end">
-          <div className="rounded-3xl border border-blue-900 bg-blue-950/20 p-6 shadow-2xl shadow-blue-950/40">
-            <Image
-              src="/profile-test.png"
-              alt="Damian Szymczak"
-              width={420}
-              height={420}
-              priority
-              className="rounded-2xl object-cover"
-            />
           </div>
         </div>
       </section>
