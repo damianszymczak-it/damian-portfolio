@@ -383,19 +383,19 @@ function SectionTitle({
   description?: string;
 }) {
   return (
-    <div className="mb-12">
+    <div className="mb-10 md:mb-12">
       {eyebrow ? (
-        <p className="mb-3 font-semibold uppercase tracking-[4px] text-blue-400">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[4px] text-blue-400 sm:text-base">
           {eyebrow}
         </p>
       ) : null}
 
-      <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+      <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
         {title}
       </h2>
 
       {description ? (
-        <p className="mt-5 max-w-5xl text-lg leading-8 text-gray-400">
+        <p className="mt-5 max-w-5xl text-base leading-7 text-gray-400 sm:text-lg sm:leading-8">
           {description}
         </p>
       ) : null}
@@ -448,67 +448,82 @@ function TagList({ items }: { items: string[] }) {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#020817] text-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between border-b border-blue-950 px-6 py-7">
-        <a href="#" className="text-3xl font-bold text-blue-400">
-          Damian.IT
-        </a>
+    <main className="min-h-screen overflow-x-hidden bg-[#020817] text-white">
+      <nav className="border-b border-blue-950">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 sm:py-7">
+          <a href="#" className="text-3xl font-bold text-blue-400 sm:text-4xl">
+            Damian.IT
+          </a>
 
-        <div className="hidden gap-7 text-sm text-gray-300 lg:flex">
-          <a href="#about" className="transition hover:text-blue-400">
-            O mnie
-          </a>
-          <a href="#skills" className="transition hover:text-blue-400">
-            Kompetencje
-          </a>
-          <a href="#operations" className="transition hover:text-blue-400">
-            IT Operations
-          </a>
-          <a href="#experience" className="transition hover:text-blue-400">
-            Doświadczenie
-          </a>
-          <a href="#projects" className="transition hover:text-blue-400">
-            Projekty
-          </a>
-          <a href="#development" className="transition hover:text-blue-400">
-            Rozwój
-          </a>
-          <a href="#contact" className="transition hover:text-blue-400">
+          <div className="hidden gap-7 text-sm text-gray-300 lg:flex">
+            <a href="#about" className="transition hover:text-blue-400">
+              O mnie
+            </a>
+            <a href="#skills" className="transition hover:text-blue-400">
+              Kompetencje
+            </a>
+            <a href="#operations" className="transition hover:text-blue-400">
+              IT Operations
+            </a>
+            <a href="#experience" className="transition hover:text-blue-400">
+              Doświadczenie
+            </a>
+            <a href="#projects" className="transition hover:text-blue-400">
+              Projekty
+            </a>
+            <a href="#development" className="transition hover:text-blue-400">
+              Rozwój
+            </a>
+            <a href="#contact" className="transition hover:text-blue-400">
+              Kontakt
+            </a>
+          </div>
+
+          <a
+            href="#contact"
+            className="rounded-lg border border-blue-800 px-4 py-2 text-sm font-semibold text-blue-200 transition hover:bg-blue-950 lg:hidden"
+          >
             Kontakt
           </a>
         </div>
 
-        <div className="flex gap-4 text-xs text-gray-300 lg:hidden">
-          <a href="#skills" className="transition hover:text-blue-400">
+        <div className="mx-auto grid max-w-7xl grid-cols-3 gap-2 px-5 pb-5 text-center text-xs text-gray-300 sm:px-6 lg:hidden">
+          <a
+            href="#skills"
+            className="rounded-lg border border-blue-950 px-3 py-2 transition hover:text-blue-400"
+          >
             Kompetencje
           </a>
-          <a href="#experience" className="transition hover:text-blue-400">
+          <a
+            href="#experience"
+            className="rounded-lg border border-blue-950 px-3 py-2 transition hover:text-blue-400"
+          >
             Doświadczenie
           </a>
-          <a href="#projects" className="transition hover:text-blue-400">
+          <a
+            href="#projects"
+            className="rounded-lg border border-blue-950 px-3 py-2 transition hover:text-blue-400"
+          >
             Projekty
-          </a>
-          <a href="#contact" className="transition hover:text-blue-400">
-            Kontakt
           </a>
         </div>
       </nav>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20 lg:py-28">
         <div>
-          <p className="mb-6 font-semibold uppercase tracking-[4px] text-blue-400">
+          <p className="mb-5 max-w-3xl text-sm font-semibold uppercase leading-7 tracking-[4px] text-blue-400 sm:text-base md:text-lg">
             IT Support L2 / IT Operations / Junior Windows Administrator
           </p>
 
-          <h1 className="mb-5 text-5xl font-extrabold leading-tight md:text-7xl">
+          <h1 className="mb-5 text-5xl font-extrabold leading-tight sm:text-6xl md:text-7xl">
             Damian Szymczak
           </h1>
 
-          <h2 className="mb-8 text-2xl font-semibold text-blue-400 md:text-3xl">
+          <h2 className="mb-8 text-2xl font-semibold leading-snug text-blue-400 sm:text-3xl">
             IT Systems Support Specialist / IT Operations Support
           </h2>
 
-          <p className="max-w-5xl text-xl leading-9 text-gray-300">
+          <p className="max-w-5xl text-lg leading-8 text-gray-300 sm:text-xl sm:leading-9">
             Specjalista IT z ponad 4 latami doświadczenia we wsparciu dużych,
             rozproszonych środowisk IT. Obecnie pracuję przy utrzymaniu
             środowiska 24/7 dla ogólnopolskiej sieci 520+ stacji, obsługując
@@ -518,17 +533,17 @@ export default function Home() {
             systemów oraz automatyzację Service Desk z użyciem AI / voice-bota.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 grid gap-4 sm:flex sm:flex-wrap">
             <a
               href="#contact"
-              className="rounded-xl bg-blue-600 px-8 py-4 font-semibold transition hover:bg-blue-700"
+              className="rounded-xl bg-blue-600 px-8 py-4 text-center font-semibold transition hover:bg-blue-700"
             >
               Kontakt
             </a>
 
             <a
               href="#projects"
-              className="rounded-xl border border-blue-700 px-8 py-4 font-semibold transition hover:bg-blue-950"
+              className="rounded-xl border border-blue-700 px-8 py-4 text-center font-semibold transition hover:bg-blue-950"
             >
               Projekty techniczne
             </a>
@@ -537,7 +552,7 @@ export default function Home() {
               href={CV_RECRUITMENT_PATH}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-xl border border-green-600 px-8 py-4 font-semibold text-green-400 transition hover:bg-green-950/30"
+              className="rounded-xl border border-green-600 px-8 py-4 text-center font-semibold text-green-400 transition hover:bg-green-950/30"
             >
               Pobierz CV rekrutacyjne
             </a>
@@ -545,14 +560,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20">
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <section className="mx-auto max-w-7xl px-5 pb-14 sm:px-6 sm:pb-20">
+        <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {stats.map((item) => (
             <div
               key={item.label}
-              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8"
             >
-              <h3 className="text-5xl font-bold text-blue-400">
+              <h3 className="text-4xl font-bold text-blue-400 sm:text-5xl">
                 {item.value}
               </h3>
               <p className="mt-3 leading-7 text-gray-400">{item.label}</p>
@@ -561,15 +576,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="about" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
         <SectionTitle
           eyebrow="Profil zawodowy"
           title="Operacyjne IT, nie tylko klasyczny helpdesk"
           description="Doświadczenie łączące Service Desk, IT Operations, monitoring, obsługę incydentów, wsparcie użytkowników, elementy administracji Windows Server / Active Directory oraz pracę z danymi i automatyzacją."
         />
 
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8">
             <h3 className="mb-4 text-2xl font-bold text-blue-400">
               Jak pracuję
             </h3>
@@ -588,7 +603,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
+          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8">
             <h3 className="mb-4 text-2xl font-bold text-blue-400">
               Kierunek zawodowy
             </h3>
@@ -611,7 +626,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="skills" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
         <SectionTitle
           eyebrow="Kompetencje"
           title="Technologie i obszary pracy"
@@ -620,11 +635,11 @@ export default function Home() {
 
         <TagList items={coreSkills} />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {skillGroups.map((group) => (
             <div
               key={group.title}
-              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-7"
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-7"
             >
               <h3 className="mb-5 text-xl font-bold text-blue-400">
                 {group.title}
@@ -636,18 +651,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="operations" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="operations" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
         <SectionTitle
           eyebrow="Specjalizacja"
           title="Najważniejsze obszary odpowiedzialności"
           description="Kluczowe obszary mojej pracy operacyjnej: incydenty, monitoring, Windows Server, Active Directory, SQL, automatyzacja i komunikacja z zespołami technicznymi."
         />
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
           {responsibilityAreas.map((area) => (
             <div
               key={area.title}
-              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8"
             >
               <h3 className="mb-5 text-2xl font-bold text-blue-400">
                 {area.title}
@@ -659,18 +674,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experience" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="experience" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
         <SectionTitle
           eyebrow="Doświadczenie"
           title="Doświadczenie zawodowe IT"
           description="Skala środowisk, odpowiedzialność operacyjna i technologie wykorzystywane w pracy IT."
         />
 
-        <div className="space-y-10">
+        <div className="space-y-8 sm:space-y-10">
           {experiences.map((experience) => (
             <article
               key={`${experience.company}-${experience.period}`}
-              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8"
             >
               <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div>
@@ -693,11 +708,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid gap-6 lg:grid-cols-2">
+              <div className="grid gap-5 lg:grid-cols-2 lg:gap-6">
                 {experience.groups.map((group) => (
                   <div
                     key={group.title}
-                    className="rounded-xl border border-blue-950 bg-[#020817] p-6"
+                    className="rounded-xl border border-blue-950 bg-[#020817] p-5 sm:p-6"
                   >
                     <h4 className="mb-4 text-lg font-bold text-blue-300">
                       {group.title}
@@ -712,18 +727,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="projects" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
         <SectionTitle
           eyebrow="Projekty"
           title="Projekty techniczne i dodatkowe doświadczenie"
           description="Wybrane projekty i działania techniczne pokazujące praktyczne doświadczenie poza samym opisem stanowiska."
         />
 
-        <div className="grid gap-8">
+        <div className="grid gap-6 sm:gap-8">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8"
             >
               <h3 className="text-2xl font-bold text-blue-400">
                 {project.title}
@@ -765,7 +780,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="development" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="development" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
         <SectionTitle
           eyebrow="Rozwój"
           title="Kierunek techniczny"
@@ -776,7 +791,7 @@ export default function Home() {
           {developmentGroups.map((group) => (
             <div
               key={group.title}
-              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8"
             >
               <h3 className="mb-5 text-2xl font-bold text-blue-400">
                 {group.title}
@@ -788,15 +803,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
+      <section id="contact" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
         <SectionTitle
           eyebrow="Kontakt"
           title="Porozmawiajmy o współpracy"
           description="Interesują mnie role IT Support L2, IT Operations Specialist, Junior Windows Administrator oraz Junior System Administrator — zdalnie, hybrydowo w Lublinie albo w modelu ustalanym indywidualnie."
         />
 
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8">
             <h3 className="mb-5 text-2xl font-bold text-blue-400">
               Damian Szymczak
             </h3>
@@ -808,7 +823,7 @@ export default function Home() {
                 Email:{" "}
                 <a
                   href="mailto:damian.szymczak.it@gmail.com"
-                  className="text-blue-300 transition hover:text-blue-200"
+                  className="break-words text-blue-300 transition hover:text-blue-200"
                 >
                   damian.szymczak.it@gmail.com
                 </a>
@@ -831,7 +846,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
+          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-6 sm:p-8">
             <h3 className="mb-5 text-2xl font-bold text-blue-400">
               Dostępne materiały
             </h3>
@@ -846,12 +861,12 @@ export default function Home() {
               compact
             />
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 grid gap-4 sm:flex sm:flex-wrap">
               <a
                 href={CV_RECRUITMENT_PATH}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-xl bg-blue-600 px-7 py-4 font-semibold transition hover:bg-blue-700"
+                className="rounded-xl bg-blue-600 px-7 py-4 text-center font-semibold transition hover:bg-blue-700"
               >
                 CV rekrutacyjne — PDF
               </a>
@@ -860,7 +875,7 @@ export default function Home() {
                 href={TECHNICAL_PROFILE_PATH}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-xl border border-blue-700 px-7 py-4 font-semibold transition hover:bg-blue-950"
+                className="rounded-xl border border-blue-700 px-7 py-4 text-center font-semibold transition hover:bg-blue-950"
               >
                 Profil techniczny — PDF
               </a>
@@ -869,7 +884,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-blue-950 px-6 py-8 text-center text-sm text-gray-500">
+      <footer className="border-t border-blue-950 px-5 py-8 text-center text-sm text-gray-500 sm:px-6">
         © {new Date().getFullYear()} Damian Szymczak — IT Portfolio
       </footer>
     </main>
