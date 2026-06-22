@@ -1,7 +1,13 @@
-export const metadata = {
+import type { Metadata } from "next";
+
+const CV_RECRUITMENT_PATH = "/Damian_Szymczak_CV_Rekrutacyjne.pdf";
+const TECHNICAL_PROFILE_PATH =
+  "/Damian_Szymczak_Profil_Techniczny_Rozszerzony.pdf";
+
+export const metadata: Metadata = {
   title: "Damian Szymczak | IT Support L2 / IT Operations",
   description:
-    "Portfolio techniczne Damiana Szymczaka: IT Support L2, IT Operations, Windows Server, Active Directory, Jira, Zabbix, SQL, PowerShell, AI Service Desk i Home Lab.",
+    "Portfolio IT Damiana Szymczaka: IT Support L2, IT Operations, Windows Server, Active Directory, Jira, Zabbix, SQL, PowerShell, AI Service Desk i Home Lab.",
 };
 
 const stats = [
@@ -50,8 +56,79 @@ const coreSkills = [
 
 const skillGroups = [
   {
-    title: "IT Operations / Incident Management",
+    title: "ITSM / Monitoring",
     items: [
+      "Jira",
+      "Zabbix",
+      "P1-P4",
+      "SLA",
+      "alerty",
+      "eskalacje",
+      "analiza zgłoszeń",
+    ],
+  },
+  {
+    title: "Systemy Windows",
+    items: [
+      "Windows 10/11",
+      "Windows Server",
+      "RDP",
+      "VNC",
+      "TeamViewer",
+      "diagnostyka połączeń",
+    ],
+  },
+  {
+    title: "Administracja",
+    items: [
+      "Active Directory",
+      "konta",
+      "grupy",
+      "OU",
+      "GPO",
+      "uprawnienia",
+      "zasoby",
+    ],
+  },
+  {
+    title: "Dane / automatyzacja",
+    items: [
+      "SQL",
+      "PowerShell: komendy i zadania operacyjne",
+      "logi",
+      "zapytania/skrypty SQL",
+      "AI w dokumentacji i bazie wiedzy",
+    ],
+  },
+  {
+    title: "Infrastruktura / Home Lab",
+    items: [
+      "DNS",
+      "DHCP",
+      "podstawy backupów",
+      "VMware",
+      "Hyper-V",
+      "Docker",
+      "NAS",
+    ],
+  },
+  {
+    title: "AI / Knowledge Base",
+    items: [
+      "voice-bot",
+      "baza wiedzy",
+      "instrukcje",
+      "znane problemy",
+      "scenariusze",
+      "walidacja odpowiedzi",
+    ],
+  },
+];
+
+const responsibilityAreas = [
+  {
+    title: "IT Operations / Incident Management",
+    points: [
       "Obsługa incydentów P1-P4 w środowisku produkcyjnym 24/7.",
       "Triage, priorytetyzacja, analiza wpływu biznesowego i eskalacje.",
       "Koordynacja awarii krytycznych dla działania stacji i usług biznesowych.",
@@ -60,7 +137,7 @@ const skillGroups = [
   },
   {
     title: "Windows Server / Active Directory",
-    items: [
+    points: [
       "Reset, odblokowywanie, tworzenie i modyfikacja kont użytkowników.",
       "Grupy bezpieczeństwa, uprawnienia, dostępy do folderów i zasobów.",
       "OU, GPO, blokowanie kont i diagnostyka problemów logowania.",
@@ -69,7 +146,7 @@ const skillGroups = [
   },
   {
     title: "Monitoring / Diagnostyka / SQL",
-    items: [
+    points: [
       "Reakcja na alerty z Zabbix oraz narzędzi operacyjnych.",
       "Analiza logów, danych operacyjnych i identyfikatorów produktów.",
       "Zapytania i skrypty SQL do analizy rozbieżności kasowych i systemowych.",
@@ -78,7 +155,7 @@ const skillGroups = [
   },
   {
     title: "AI / Automatyzacja / Baza wiedzy",
-    items: [
+    points: [
       "Udział w projekcie automatyzacji Service Desk z użyciem AI / voice-bota.",
       "Tworzenie instrukcji, procedur i opisów znanych problemów.",
       "Testowanie scenariuszy rozmów, intencji i jakości odpowiedzi.",
@@ -87,10 +164,10 @@ const skillGroups = [
   },
 ];
 
-const experience = [
+const experiences = [
   {
-    company: "Anwim S.A.",
     role: "IT Systems Support Specialist / IT Operations Support",
+    company: "Anwim S.A.",
     period: "05.2024 - obecnie",
     location: "Lublin / środowisko 24/7",
     description:
@@ -98,7 +175,7 @@ const experience = [
     groups: [
       {
         title: "Incident Management / IT Operations",
-        items: [
+        points: [
           "Obsługa zgłoszeń, alertów monitoringowych i incydentów P1-P4.",
           "Triage i koordynacja awarii w Jira: priorytety, wpływ biznesowy, eskalacje i komunikacja statusów.",
           "Obsługa incydentów związanych z płatnościami, systemami sprzedaży, sprzętem, aplikacjami biznesowymi i systemami wewnętrznymi.",
@@ -106,7 +183,7 @@ const experience = [
       },
       {
         title: "Monitoring / ciągłość działania",
-        items: [
+        points: [
           "Monitoring systemów i infrastruktury z użyciem Zabbix oraz narzędzi operacyjnych.",
           "Reakcja na alerty, weryfikacja wpływu problemu na działanie stacji i koordynacja działań naprawczych.",
           "Eskalacja problemów do zespołów technicznych i zewnętrznych dostawców oraz monitorowanie postępu napraw.",
@@ -114,7 +191,7 @@ const experience = [
       },
       {
         title: "Windows Server / Active Directory",
-        items: [
+        points: [
           "Operacyjne wsparcie Windows Server: usługi, procesy, miejsce na dysku, konfiguracja aplikacji/usług i diagnostyka połączeń.",
           "Operacyjne wsparcie Active Directory: konta, hasła, grupy, uprawnienia, OU, GPO i problemy logowania.",
           "Wsparcie techniczne środowiska użytkowników i systemów produkcyjnych w trybie 24/7.",
@@ -122,7 +199,7 @@ const experience = [
       },
       {
         title: "SQL / diagnostyka danych",
-        items: [
+        points: [
           "Diagnostyka SQL: analiza logów, danych operacyjnych, identyfikatorów produktów oraz rozbieżności kasowych/systemowych.",
           "Wykorzystanie zapytań i skryptów SQL do sprawdzania problemów oraz wsparcia analizy incydentów.",
           "Łączenie informacji z systemów, zgłoszeń i danych operacyjnych w celu szybszego ustalenia źródła problemu.",
@@ -130,7 +207,7 @@ const experience = [
       },
       {
         title: "AI / Knowledge Base / szkolenia",
-        items: [
+        points: [
           "Udział w projekcie AI / voice-bot: baza wiedzy, instrukcje, znane problemy, scenariusze rozmów i walidacja odpowiedzi.",
           "Tworzenie instrukcji i procedur wspierających automatyzację obsługi powtarzalnych zgłoszeń.",
           "Szkolenie i wdrożenie 4 nowych pracowników 1. linii wsparcia IT.",
@@ -139,16 +216,16 @@ const experience = [
     ],
   },
   {
-    company: "ACS Audika Sp. z o.o.",
     role: "Specjalista ds. Wsparcia IT",
+    company: "ACS Audika Sp. z o.o.",
     period: "09.2021 - 04.2024",
-    location: "Wsparcie ogólnopolskiej sieci placówek",
+    location: "wsparcie ogólnopolskiej sieci placówek",
     description:
       "Zdalne i operacyjne wsparcie IT dla dużej, rozproszonej organizacji obejmującej 650+ placówek.",
     groups: [
       {
         title: "Wsparcie użytkowników i placówek",
-        items: [
+        points: [
           "Wsparcie użytkowników i placówek przez telefon, e-mail oraz system zgłoszeń.",
           "Diagnostyka problemów z Windows 10, aplikacjami wewnętrznymi i środowiskiem użytkownika.",
           "Przygotowywanie, konfiguracja i wdrażanie komputerów oraz stanowisk pracy.",
@@ -156,7 +233,7 @@ const experience = [
       },
       {
         title: "Sprzęt / logistyka / wdrożenia",
-        items: [
+        points: [
           "Udział w masowym przygotowaniu sprzętu IT na potrzeby rynku zagranicznego, w tym Belgii.",
           "Logistyka sprzętu IT: ewidencja, wydawanie, wysyłki i wsparcie użytkowników.",
           "Praca w rozproszonej organizacji wymagającej dokładnej komunikacji i sprawnej obsługi wielu lokalizacji.",
@@ -265,17 +342,29 @@ const projects = [
   },
 ];
 
-const developmentAreas = [
-  "Windows Server Administration",
-  "Active Directory",
-  "Microsoft 365",
-  "Azure / Entra ID",
-  "PowerShell",
-  "SQL",
-  "Monitoring",
-  "Automatyzacja Service Desk",
-  "Infrastructure Support",
-  "Język angielski techniczny — rozwój",
+const developmentGroups = [
+  {
+    title: "Administracja i infrastruktura",
+    items: [
+      "Windows Server",
+      "Active Directory",
+      "Microsoft 365",
+      "Azure / Entra ID",
+      "Monitoring",
+      "Infrastructure Support",
+    ],
+  },
+  {
+    title: "Automatyzacja i dane",
+    items: [
+      "PowerShell",
+      "SQL",
+      "automatyzacja Service Desk",
+      "AI / Knowledge Base",
+      "dokumentacja techniczna",
+      "angielski techniczny — rozwój",
+    ],
+  },
 ];
 
 function SectionTitle({
@@ -289,19 +378,21 @@ function SectionTitle({
 }) {
   return (
     <div className="mb-12">
-      {eyebrow && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[4px] text-blue-400">
+      {eyebrow ? (
+        <p className="mb-3 font-semibold uppercase tracking-[4px] text-blue-400">
           {eyebrow}
         </p>
-      )}
+      ) : null}
 
-      <h2 className="text-4xl font-bold text-white md:text-5xl">{title}</h2>
+      <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+        {title}
+      </h2>
 
-      {description && (
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-300">
+      {description ? (
+        <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-400">
           {description}
         </p>
-      )}
+      ) : null}
     </div>
   );
 }
@@ -316,13 +407,15 @@ function BulletList({
   return (
     <div
       role="list"
-      className={compact ? "space-y-2 text-gray-300" : "space-y-4 text-gray-300"}
+      className={compact ? "space-y-2 text-gray-300" : "space-y-3 text-gray-300"}
     >
       {items.map((item) => (
-        <div key={item} role="listitem" className="flex gap-3 leading-7">
-          <span aria-hidden="true" className="mt-[1px] text-blue-400">
-            •
-          </span>
+        <div
+          role="listitem"
+          key={item}
+          className={compact ? "flex gap-3 leading-7" : "flex gap-3 leading-8"}
+        >
+          <span className="mt-[1px] shrink-0 text-blue-400">•</span>
           <span>{item}</span>
         </div>
       ))}
@@ -330,15 +423,15 @@ function BulletList({
   );
 }
 
-function TagList({ tags }: { tags: string[] }) {
+function TagList({ items }: { items: string[] }) {
   return (
-    <div className="flex flex-wrap gap-2">
-      {tags.map((tag) => (
+    <div className="flex flex-wrap gap-3">
+      {items.map((item) => (
         <span
-          key={tag}
-          className="rounded-full border border-blue-900 px-3 py-1 text-sm text-blue-300"
+          key={item}
+          className="rounded-full border border-blue-900 bg-blue-950/20 px-4 py-2 text-sm text-blue-200"
         >
-          {tag}
+          {item}
         </span>
       ))}
     </div>
@@ -348,38 +441,36 @@ function TagList({ tags }: { tags: string[] }) {
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#020817] text-white">
-      <nav className="border-b border-blue-950 px-6 py-7">
-        <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <a href="#" className="text-3xl font-bold text-blue-400">
-            Damian.IT
-          </a>
+      <nav className="mx-auto flex max-w-7xl items-center justify-between border-b border-blue-950 px-6 py-7">
+        <a href="#" className="text-3xl font-bold text-blue-400">
+          Damian.IT
+        </a>
 
-          <div className="hidden gap-7 text-sm text-gray-300 lg:flex">
-            <a href="#about" className="transition hover:text-blue-400">
-              O mnie
-            </a>
-            <a href="#skills" className="transition hover:text-blue-400">
-              Kompetencje
-            </a>
-            <a href="#operations" className="transition hover:text-blue-400">
-              IT Operations
-            </a>
-            <a href="#experience" className="transition hover:text-blue-400">
-              Doświadczenie
-            </a>
-            <a href="#projects" className="transition hover:text-blue-400">
-              Projekty
-            </a>
-            <a href="#development" className="transition hover:text-blue-400">
-              Rozwój
-            </a>
-            <a href="#contact" className="transition hover:text-blue-400">
-              Kontakt
-            </a>
-          </div>
+        <div className="hidden gap-7 text-sm text-gray-300 lg:flex">
+          <a href="#about" className="transition hover:text-blue-400">
+            O mnie
+          </a>
+          <a href="#skills" className="transition hover:text-blue-400">
+            Kompetencje
+          </a>
+          <a href="#operations" className="transition hover:text-blue-400">
+            IT Operations
+          </a>
+          <a href="#experience" className="transition hover:text-blue-400">
+            Doświadczenie
+          </a>
+          <a href="#projects" className="transition hover:text-blue-400">
+            Projekty
+          </a>
+          <a href="#development" className="transition hover:text-blue-400">
+            Rozwój
+          </a>
+          <a href="#contact" className="transition hover:text-blue-400">
+            Kontakt
+          </a>
         </div>
 
-        <div className="mx-auto mt-5 flex max-w-7xl flex-wrap gap-4 text-sm text-gray-300 lg:hidden">
+        <div className="flex gap-4 text-xs text-gray-300 lg:hidden">
           <a href="#skills" className="transition hover:text-blue-400">
             Kompetencje
           </a>
@@ -409,7 +500,7 @@ export default function Home() {
             IT Systems Support Specialist / IT Operations Support
           </h2>
 
-          <p className="max-w-5xl text-xl leading-9 text-gray-300">
+          <p className="max-w-4xl text-xl leading-9 text-gray-300">
             Specjalista IT z ponad 4 latami doświadczenia we wsparciu dużych,
             rozproszonych środowisk IT. Obecnie pracuję przy utrzymaniu
             środowiska 24/7 dla ogólnopolskiej sieci 520+ stacji, obsługując
@@ -435,12 +526,12 @@ export default function Home() {
             </a>
 
             <a
-              href="/Damian_Szymczak_CV.pdf"
+              href={CV_RECRUITMENT_PATH}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-xl border border-green-600 px-8 py-4 font-semibold text-green-400 transition hover:bg-green-950/30"
             >
-              Pobierz CV
+              Pobierz CV rekrutacyjne
             </a>
           </div>
         </div>
@@ -495,11 +586,11 @@ export default function Home() {
             </h3>
 
             <p className="leading-8 text-gray-300">
-              Rozwijam się w stronę ról IT Support L2, IT Operations
-              Specialist, Junior Windows Administrator i Junior System
-              Administrator. Szczególnie interesują mnie Windows Server, Active
-              Directory, monitoring, SQL, PowerShell, Microsoft 365, Azure /
-              Entra ID oraz automatyzacja pracy IT.
+              Rozwijam się w stronę ról IT Support L2, IT Operations Specialist,
+              Junior Windows Administrator i Junior System Administrator.
+              Szczególnie interesują mnie Windows Server, Active Directory,
+              monitoring, SQL, PowerShell, Microsoft 365, Azure / Entra ID oraz
+              automatyzacja pracy IT.
             </p>
 
             <p className="mt-5 leading-8 text-gray-300">
@@ -519,13 +610,18 @@ export default function Home() {
           description="Kluczowe technologie i obszary, z którymi pracuję lub które rozwijam pod role IT Support L2, IT Operations i Junior Windows Administrator."
         />
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {coreSkills.map((skill) => (
+        <TagList items={coreSkills} />
+
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {skillGroups.map((group) => (
             <div
-              key={skill}
-              className="rounded-xl border border-blue-950 bg-blue-950/10 p-5 text-center text-gray-200 transition hover:border-blue-700 hover:bg-blue-950/30"
+              key={group.title}
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-7"
             >
-              {skill}
+              <h3 className="mb-5 text-xl font-bold text-blue-400">
+                {group.title}
+              </h3>
+              <TagList items={group.items} />
             </div>
           ))}
         </div>
@@ -539,16 +635,15 @@ export default function Home() {
         />
 
         <div className="grid gap-8 lg:grid-cols-2">
-          {skillGroups.map((group) => (
+          {responsibilityAreas.map((area) => (
             <div
-              key={group.title}
+              key={area.title}
               className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
             >
-              <h3 className="mb-6 text-2xl font-bold text-blue-400">
-                {group.title}
+              <h3 className="mb-5 text-2xl font-bold text-blue-400">
+                {area.title}
               </h3>
-
-              <BulletList items={group.items} />
+              <BulletList items={area.points} />
             </div>
           ))}
         </div>
@@ -562,40 +657,40 @@ export default function Home() {
         />
 
         <div className="space-y-10">
-          {experience.map((job) => (
+          {experiences.map((experience) => (
             <article
-              key={`${job.company}-${job.period}`}
+              key={`${experience.company}-${experience.period}`}
               className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
             >
-              <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+              <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div>
-                  <h3 className="text-3xl font-bold">{job.role}</h3>
-                  <p className="mt-2 text-xl font-semibold text-blue-400">
-                    {job.company}
+                  <h3 className="text-2xl font-bold text-blue-400">
+                    {experience.role}
+                  </h3>
+                  <p className="mt-2 text-xl font-semibold">
+                    {experience.company}
+                  </p>
+                  <p className="mt-3 max-w-4xl leading-8 text-gray-300">
+                    {experience.description}
                   </p>
                 </div>
 
-                <div className="text-left text-gray-400 lg:text-right">
-                  <p>{job.period}</p>
-                  <p>{job.location}</p>
+                <div className="rounded-xl border border-blue-900 bg-[#020817] p-5 text-sm text-gray-300 lg:min-w-64">
+                  <p>{experience.period}</p>
+                  <p className="mt-2">{experience.location}</p>
                 </div>
               </div>
 
-              <p className="mb-8 max-w-4xl leading-8 text-gray-300">
-                {job.description}
-              </p>
-
               <div className="grid gap-6 lg:grid-cols-2">
-                {job.groups.map((group) => (
+                {experience.groups.map((group) => (
                   <div
                     key={group.title}
                     className="rounded-xl border border-blue-950 bg-[#020817] p-6"
                   >
-                    <h4 className="mb-4 text-lg font-bold text-blue-400">
+                    <h4 className="mb-4 text-lg font-bold text-blue-300">
                       {group.title}
                     </h4>
-
-                    <BulletList items={group.items} compact />
+                    <BulletList items={group.points} compact />
                   </div>
                 ))}
               </div>
@@ -611,34 +706,34 @@ export default function Home() {
           description="Wybrane projekty i działania techniczne pokazujące praktyczne doświadczenie poza samym opisem stanowiska."
         />
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8">
           {projects.map((project) => (
             <article
               key={project.title}
               className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
             >
-              <h3 className="mb-5 text-2xl font-bold text-blue-400">
+              <h3 className="text-2xl font-bold text-blue-400">
                 {project.title}
               </h3>
 
-              <div className="space-y-5 text-gray-300">
-                <div>
-                  <p className="mb-1 font-semibold text-white">
+              <div className="mt-6 grid gap-5 lg:grid-cols-3">
+                <div className="rounded-xl border border-blue-950 bg-[#020817] p-5">
+                  <h4 className="mb-3 font-bold text-blue-300">
                     Kontekst / problem
-                  </p>
-                  <p className="leading-8">{project.context}</p>
+                  </h4>
+                  <p className="leading-7 text-gray-300">{project.context}</p>
                 </div>
 
-                <div>
-                  <p className="mb-1 font-semibold text-white">Moja rola</p>
-                  <p className="leading-8">{project.role}</p>
+                <div className="rounded-xl border border-blue-950 bg-[#020817] p-5">
+                  <h4 className="mb-3 font-bold text-blue-300">Moja rola</h4>
+                  <p className="leading-7 text-gray-300">{project.role}</p>
                 </div>
 
-                <div>
-                  <p className="mb-1 font-semibold text-white">
+                <div className="rounded-xl border border-blue-950 bg-[#020817] p-5">
+                  <h4 className="mb-3 font-bold text-blue-300">
                     Efekt / wartość
-                  </p>
-                  <p className="leading-8">{project.effect}</p>
+                  </h4>
+                  <p className="leading-7 text-gray-300">{project.effect}</p>
                 </div>
               </div>
 
@@ -647,7 +742,7 @@ export default function Home() {
               </div>
 
               <div className="mt-6">
-                <TagList tags={project.tags} />
+                <TagList items={project.tags} />
               </div>
             </article>
           ))}
@@ -661,21 +756,18 @@ export default function Home() {
           description="Aktualnie rozwijam obszary potrzebne do ról L2, IT Operations i administracji systemami Windows: Windows Server, Active Directory, Microsoft 365, Azure / Entra ID, PowerShell, SQL, monitoring oraz automatyzację pracy Service Desk."
         />
 
-        <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
-          <h3 className="mb-6 text-2xl font-bold text-blue-400">
-            Obszary rozwijane
-          </h3>
-
-          <div className="flex flex-wrap gap-3">
-            {developmentAreas.map((area) => (
-              <span
-                key={area}
-                className="rounded-full border border-blue-900 px-4 py-2 text-sm text-blue-300"
-              >
-                {area}
-              </span>
-            ))}
-          </div>
+        <div className="grid gap-6 lg:grid-cols-2">
+          {developmentGroups.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
+            >
+              <h3 className="mb-5 text-2xl font-bold text-blue-400">
+                {group.title}
+              </h3>
+              <TagList items={group.items} />
+            </div>
+          ))}
         </div>
       </section>
 
@@ -686,55 +778,71 @@ export default function Home() {
           description="Interesują mnie role IT Support L2, IT Operations Specialist, Junior Windows Administrator oraz Junior System Administrator — zdalnie, hybrydowo w Lublinie albo w modelu ustalanym indywidualnie."
         />
 
-        <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
-              <p className="text-2xl font-bold">Damian Szymczak</p>
-              <p className="mt-2 text-blue-400">
-                IT Systems Support Specialist / IT Operations Support
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
+            <h3 className="mb-5 text-2xl font-bold text-blue-400">
+              Damian Szymczak
+            </h3>
+
+            <div className="space-y-4 leading-8 text-gray-300">
+              <p>IT Systems Support Specialist / IT Operations Support</p>
+
+              <p>
+                Email:{" "}
+                <a
+                  href="mailto:damian.szymczak.it@gmail.com"
+                  className="text-blue-300 transition hover:text-blue-200"
+                >
+                  damian.szymczak.it@gmail.com
+                </a>
               </p>
 
-              <div className="mt-8 space-y-3 text-gray-300">
-                <p>
-                  Email:{" "}
-                  <a
-                    href="mailto:damian.szymczak.it@gmail.com"
-                    className="text-blue-400 hover:text-blue-300"
-                  >
-                    damian.szymczak.it@gmail.com
-                  </a>
-                </p>
+              <p>
+                Telefon:{" "}
+                <a
+                  href="tel:+48733878717"
+                  className="text-blue-300 transition hover:text-blue-200"
+                >
+                  733-878-717
+                </a>
+              </p>
 
-                <p>Telefon: 733-878-717</p>
-                <p>
-                  Lokalizacja: Lublin / zdalnie — cała Polska / hybrydowo —
-                  Lublin
-                </p>
-              </div>
+              <p>Lokalizacja: Lublin / zdalnie — cała Polska / hybrydowo — Lublin</p>
             </div>
+          </div>
 
-            <div className="rounded-2xl border border-blue-950 bg-[#020817] p-6">
-              <h3 className="mb-4 text-xl font-bold text-blue-400">
-                Dostępne materiały
-              </h3>
+          <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
+            <h3 className="mb-5 text-2xl font-bold text-blue-400">
+              Dostępne materiały
+            </h3>
 
-              <BulletList
-                items={[
-                  "CV w PDF do pobrania.",
-                  "Rozszerzony profil techniczny na tej stronie.",
-                  "Projekty techniczne, Home Lab i doświadczenie operacyjne.",
-                  "Sekcje AI / Service Desk / Knowledge Base / SQL.",
-                ]}
-                compact
-              />
+            <BulletList
+              items={[
+                "CV rekrutacyjne — PDF do szybkiej oceny profilu.",
+                "Profil techniczny rozszerzony — szczegółowy opis doświadczenia, projektów i kompetencji.",
+                "Projekty techniczne, Home Lab i doświadczenie operacyjne.",
+                "Sekcje AI / Service Desk / Knowledge Base / SQL.",
+              ]}
+              compact
+            />
 
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="/Damian_Szymczak_CV.pdf"
+                href={CV_RECRUITMENT_PATH}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-block rounded-xl bg-blue-600 px-7 py-4 font-semibold transition hover:bg-blue-700"
+                className="inline-block rounded-xl bg-blue-600 px-7 py-4 font-semibold transition hover:bg-blue-700"
               >
-                Pobierz CV
+                CV rekrutacyjne — PDF
+              </a>
+
+              <a
+                href={TECHNICAL_PROFILE_PATH}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-xl border border-blue-700 px-7 py-4 font-semibold transition hover:bg-blue-950"
+              >
+                Profil techniczny — PDF
               </a>
             </div>
           </div>
