@@ -19,7 +19,7 @@ const stats = [
   },
   {
     value: "P1-P4",
-    label: "incydenty, SLA, triage i eskalacje",
+    label: "incydenty P1-P4, SLA, triage i eskalacje",
   },
 ];
 
@@ -43,7 +43,7 @@ const coreSkills = [
   "VMware",
   "Hyper-V",
   "Microsoft 365",
-  "Azure / Entra ID - rozwój",
+  "Azure / Entra ID — rozwój",
   "AI Service Desk",
   "Knowledge Base / Baza wiedzy IT",
 ];
@@ -95,17 +95,47 @@ const experience = [
     location: "Lublin / środowisko 24/7",
     description:
       "Wsparcie operacyjne środowiska IT dla ogólnopolskiej sieci 520+ stacji oraz systemów krytycznych dla ciągłości działania biznesu.",
-    bullets: [
-      "Obsługa zgłoszeń, alertów monitoringowych i incydentów P1-P4.",
-      "Triage i koordynacja awarii w Jira: priorytety, wpływ biznesowy, eskalacje i komunikacja statusów.",
-      "Monitoring systemów i infrastruktury z użyciem Zabbix oraz narzędzi operacyjnych.",
-      "Operacyjne wsparcie Windows Server: usługi, procesy, miejsce na dysku, konfiguracja aplikacji/usług i diagnostyka połączeń.",
-      "Operacyjne wsparcie Active Directory: konta, hasła, grupy, uprawnienia, OU, GPO i problemy logowania.",
-      "Diagnostyka SQL: analiza logów, danych operacyjnych, identyfikatorów produktów oraz rozbieżności kasowych/systemowych.",
-      "Obsługa incydentów związanych z płatnościami, systemami sprzedaży, sprzętem, aplikacjami biznesowymi i systemami wewnętrznymi.",
-      "Eskalacja problemów do zespołów technicznych i zewnętrznych dostawców oraz monitorowanie działań naprawczych.",
-      "Szkolenie i wdrożenie 4 nowych pracowników 1. linii wsparcia IT.",
-      "Udział w projekcie AI / voice-bot: baza wiedzy, instrukcje, znane problemy, scenariusze rozmów i walidacja odpowiedzi.",
+    groups: [
+      {
+        title: "Incident Management / IT Operations",
+        items: [
+          "Obsługa zgłoszeń, alertów monitoringowych i incydentów P1-P4.",
+          "Triage i koordynacja awarii w Jira: priorytety, wpływ biznesowy, eskalacje i komunikacja statusów.",
+          "Obsługa incydentów związanych z płatnościami, systemami sprzedaży, sprzętem, aplikacjami biznesowymi i systemami wewnętrznymi.",
+        ],
+      },
+      {
+        title: "Monitoring / ciągłość działania",
+        items: [
+          "Monitoring systemów i infrastruktury z użyciem Zabbix oraz narzędzi operacyjnych.",
+          "Reakcja na alerty, weryfikacja wpływu problemu na działanie stacji i koordynacja działań naprawczych.",
+          "Eskalacja problemów do zespołów technicznych i zewnętrznych dostawców oraz monitorowanie postępu napraw.",
+        ],
+      },
+      {
+        title: "Windows Server / Active Directory",
+        items: [
+          "Operacyjne wsparcie Windows Server: usługi, procesy, miejsce na dysku, konfiguracja aplikacji/usług i diagnostyka połączeń.",
+          "Operacyjne wsparcie Active Directory: konta, hasła, grupy, uprawnienia, OU, GPO i problemy logowania.",
+          "Wsparcie techniczne środowiska użytkowników i systemów produkcyjnych w trybie 24/7.",
+        ],
+      },
+      {
+        title: "SQL / diagnostyka danych",
+        items: [
+          "Diagnostyka SQL: analiza logów, danych operacyjnych, identyfikatorów produktów oraz rozbieżności kasowych/systemowych.",
+          "Wykorzystanie zapytań i skryptów SQL do sprawdzania problemów oraz wsparcia analizy incydentów.",
+          "Łączenie informacji z systemów, zgłoszeń i danych operacyjnych w celu szybszego ustalenia źródła problemu.",
+        ],
+      },
+      {
+        title: "AI / Knowledge Base / szkolenia",
+        items: [
+          "Udział w projekcie AI / voice-bot: baza wiedzy, instrukcje, znane problemy, scenariusze rozmów i walidacja odpowiedzi.",
+          "Tworzenie instrukcji i procedur wspierających automatyzację obsługi powtarzalnych zgłoszeń.",
+          "Szkolenie i wdrożenie 4 nowych pracowników 1. linii wsparcia IT.",
+        ],
+      },
     ],
   },
   {
@@ -115,12 +145,23 @@ const experience = [
     location: "Wsparcie ogólnopolskiej sieci placówek",
     description:
       "Zdalne i operacyjne wsparcie IT dla dużej, rozproszonej organizacji obejmującej 650+ placówek.",
-    bullets: [
-      "Wsparcie użytkowników i placówek przez telefon, e-mail oraz system zgłoszeń.",
-      "Diagnostyka problemów z Windows 10, aplikacjami wewnętrznymi i środowiskiem użytkownika.",
-      "Przygotowywanie, konfiguracja i wdrażanie komputerów oraz stanowisk pracy.",
-      "Udział w masowym przygotowaniu sprzętu IT na potrzeby rynku zagranicznego, w tym Belgii.",
-      "Logistyka sprzętu IT: ewidencja, wydawanie, wysyłki i wsparcie użytkowników.",
+    groups: [
+      {
+        title: "Wsparcie użytkowników i placówek",
+        items: [
+          "Wsparcie użytkowników i placówek przez telefon, e-mail oraz system zgłoszeń.",
+          "Diagnostyka problemów z Windows 10, aplikacjami wewnętrznymi i środowiskiem użytkownika.",
+          "Przygotowywanie, konfiguracja i wdrażanie komputerów oraz stanowisk pracy.",
+        ],
+      },
+      {
+        title: "Sprzęt / logistyka / wdrożenia",
+        items: [
+          "Udział w masowym przygotowaniu sprzętu IT na potrzeby rynku zagranicznego, w tym Belgii.",
+          "Logistyka sprzętu IT: ewidencja, wydawanie, wysyłki i wsparcie użytkowników.",
+          "Praca w rozproszonej organizacji wymagającej dokładnej komunikacji i sprawnej obsługi wielu lokalizacji.",
+        ],
+      },
     ],
   },
 ];
@@ -128,63 +169,99 @@ const experience = [
 const projects = [
   {
     title: "AI / Voice-bot dla Service Desk",
-    text:
-      "Udział w projekcie automatyzacji obsługi zgłoszeń telefonicznych. Voice-bot korzysta z instrukcji, opisów znanych problemów i scenariuszy, aby obsługiwać powtarzalne przypadki, a trudniejsze zgłoszenia przekazywać do konsultanta.",
-    tags: ["AI", "Voice-bot", "Service Desk", "Knowledge Base", "Testing"],
+    context:
+      "Automatyzacja obsługi powtarzalnych zgłoszeń telefonicznych w środowisku Service Desk.",
+    role:
+      "Tworzenie instrukcji, opisów znanych problemów, scenariuszy rozmów, walidacja odpowiedzi oraz zgłaszanie poprawek.",
+    effect:
+      "Lepsze przygotowanie bazy wiedzy dla voice-bota i sprawniejsze kierowanie trudniejszych zgłoszeń do konsultanta.",
     points: [
-      "Tworzenie instrukcji i opisów znanych problemów.",
-      "Testowanie scenariuszy rozmów i rozpoznawania intencji.",
-      "Walidacja jakości odpowiedzi oraz zgłaszanie poprawek.",
-      "Analiza przypadków do automatyzacji i eskalacji do konsultanta.",
+      "Tworzenie i porządkowanie instrukcji dla powtarzalnych problemów.",
+      "Testowanie rozpoznawania intencji oraz jakości odpowiedzi voice-bota.",
+      "Analiza przypadków do automatyzacji oraz eskalacji do człowieka.",
+      "Współpraca przy rozwoju Knowledge Base dla Service Desk.",
     ],
+    tags: ["AI", "Voice-bot", "Service Desk", "Knowledge Base", "Testing"],
   },
   {
-    title: "Home Lab - infrastruktura domowa",
-    text:
-      "Środowisko testowe rozwijane pod administrację systemami, monitoring, wirtualizację i diagnostykę. Projekt służy do ćwiczenia scenariuszy podobnych do pracy IT Operations i Junior Windows Administrator.",
-    tags: ["Docker", "VM", "Monitoring", "NAS", "Windows Server"],
+    title: "SQL / analiza rozbieżności kasowych i systemowych",
+    context:
+      "Diagnostyka problemów oparta o dane operacyjne, logi, identyfikatory produktów oraz rozbieżności kasowe/systemowe.",
+    role:
+      "Wykorzystywanie zapytań i skryptów SQL do weryfikacji problemów, analizy danych oraz wsparcia obsługi incydentów.",
+    effect:
+      "Szybsze ustalanie źródła problemu i lepsze wsparcie procesów IT Operations tam, gdzie zgłoszenie wymaga pracy z danymi.",
+    points: [
+      "Analiza danych operacyjnych, logów i identyfikatorów produktów.",
+      "Zapytania i skrypty SQL do sprawdzania rozbieżności kasowych/systemowych.",
+      "Wsparcie diagnostyki incydentów związanych z systemami sprzedaży i płatnościami.",
+      "Łączenie informacji z systemów, zgłoszeń i danych technicznych.",
+    ],
+    tags: ["SQL", "Diagnostyka", "IT Operations", "Dane operacyjne", "Incident Analysis"],
+  },
+  {
+    title: "Home Lab — monitoring, VM, NAS i diagnostyka",
+    context:
+      "Domowe środowisko testowe rozwijane pod administrację systemami, monitoring, wirtualizację i diagnostykę.",
+    role:
+      "Budowanie scenariuszy technicznych podobnych do pracy IT Operations i Junior Windows Administrator.",
+    effect:
+      "Praktyczne ćwiczenie monitoringu, dostępności usług, pracy na maszynach wirtualnych, backupów i diagnostyki sieci.",
     points: [
       "Monitoring urządzeń domowych i łącza internetowego.",
-      "Maszyny wirtualne do testów administracyjnych.",
-      "Domowy NAS i scenariusze przechowywania danych.",
-      "Testy usług, backupów, sieci i diagnostyki.",
+      "Maszyny wirtualne do testów administracyjnych i scenariuszy serwerowych.",
+      "Domowy NAS oraz scenariusze przechowywania i zabezpieczania danych.",
+      "Testy usług, backupów, sieci, dostępności i podstawowej diagnostyki.",
     ],
+    tags: ["Docker", "VM", "Monitoring", "NAS", "Windows Server"],
   },
   {
-    title: "Raspberry Candle - strona i sklep online",
-    text:
-      "Techniczna konfiguracja strony i sklepu internetowego. Projekt łączy obsługę domeny, treści, panelu administracyjnego, analityki i automatyzacji pracy z użyciem narzędzi AI.",
-    tags: ["E-commerce", "Shoper", "GA4", "Meta Pixel", "AI"],
+    title: "Portfolio techniczne — Next.js, Vercel i domena",
+    context:
+      "Publiczne portfolio techniczne stworzone jako rozszerzenie klasycznego CV i miejsce prezentacji doświadczenia IT.",
+    role:
+      "Przygotowanie struktury strony, wdrożenie projektu, publikacja na Vercel i podpięcie domeny produkcyjnej.",
+    effect:
+      "Czytelny profil rekrutacyjny pokazujący doświadczenie, kompetencje, projekty i kierunek rozwoju technicznego.",
+    points: [
+      "Strona zbudowana w Next.js i Tailwind CSS.",
+      "Hosting na Vercel oraz podpięcie domeny produkcyjnej.",
+      "Struktura strony przygotowana pod rekrutację IT.",
+      "Możliwość dalszej rozbudowy o case studies, repozytoria i projekty techniczne.",
+    ],
+    tags: ["Next.js", "Vercel", "Tailwind", "Portfolio", "Git"],
+  },
+  {
+    title: "Raspberry Candle — konfiguracja techniczna e-commerce",
+    context:
+      "Techniczna obsługa strony i sklepu internetowego z naciskiem na konfigurację, treści, domenę i narzędzia analityczne.",
+    role:
+      "Konfiguracja sklepu, praca z panelem administracyjnym, domeną, strukturą strony oraz materiałami tworzonymi z pomocą AI.",
+    effect:
+      "Praktyczne doświadczenie w obsłudze projektu web/e-commerce od strony technicznej i administracyjnej.",
     points: [
       "Konfiguracja struktury strony i podstawowych ustawień sklepu.",
-      "Praca z panelem administracyjnym i domeną.",
-      "Wykorzystanie AI do tworzenia treści i opisów.",
+      "Praca z panelem administracyjnym, domeną i treściami.",
+      "Wykorzystanie AI do tworzenia opisów, treści i materiałów pomocniczych.",
       "Obsługa techniczna oraz rozwój materiałów marketingowo-technicznych.",
     ],
+    tags: ["E-commerce", "Shoper", "GA4", "Meta Pixel", "AI"],
   },
   {
     title: "Wsparcie IT dla biura rachunkowego",
-    text:
-      "Dodatkowe wsparcie techniczne dla małego środowiska biurowego: komputery, drukarki, poczta, oprogramowanie biurowe, dostęp do zasobów i podstawowe bezpieczeństwo pracy z dokumentami.",
-    tags: ["Windows", "Office", "Printers", "Backup", "Support"],
+    context:
+      "Dodatkowe wsparcie techniczne dla małego środowiska biurowego pracującego z dokumentami, drukiem, pocztą i oprogramowaniem biurowym.",
+    role:
+      "Konfiguracja komputerów, drukarek, poczty, podstawowych dostępów oraz bieżąca diagnostyka problemów użytkowników.",
+    effect:
+      "Stabilniejsze środowisko pracy biurowej i szybsze rozwiązywanie codziennych problemów technicznych.",
     points: [
       "Konfiguracja komputerów, drukarek i poczty.",
       "Diagnostyka problemów z Windows, siecią i dostępami.",
       "Wsparcie użytkowników w codziennej pracy biurowej.",
       "Podstawowa higiena bezpieczeństwa i kopii danych.",
     ],
-  },
-  {
-    title: "Portfolio techniczne",
-    text:
-      "Publiczne portfolio stworzone w Next.js i hostowane na Vercel. Strona prezentuje doświadczenie, kompetencje, projekty, kierunek rozwoju oraz rozszerzony profil techniczny poza klasycznym CV.",
-    tags: ["Next.js", "Vercel", "Tailwind", "Portfolio", "Git"],
-    points: [
-      "Struktura strony pod rekrutację IT.",
-      "Sekcje: doświadczenie, kompetencje, projekty i kontakt.",
-      "Rozszerzenie klasycznego CV o kontekst techniczny.",
-      "Możliwość dalszej rozbudowy o repozytoria i case studies.",
-    ],
+    tags: ["Windows", "Office", "Printers", "Backup", "Support"],
   },
 ];
 
@@ -198,30 +275,8 @@ const developmentAreas = [
   "Monitoring",
   "Automatyzacja Service Desk",
   "Infrastructure Support",
-  "Język angielski techniczny",
+  "Język angielski techniczny — rozwój",
 ];
-
-function splitIntoColumns(items: string[]) {
-  const midpoint = Math.ceil(items.length / 2);
-
-  return {
-    left: items.slice(0, midpoint),
-    right: items.slice(midpoint),
-  };
-}
-
-function BulletList({ items }: { items: string[] }) {
-  return (
-    <ul className="list-none space-y-4 text-gray-300">
-      {items.map((item) => (
-        <li key={item} className="flex gap-2 leading-7">
-          <span className="mt-[1px] text-blue-400">•</span>
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
 
 function SectionTitle({
   eyebrow,
@@ -251,32 +306,88 @@ function SectionTitle({
   );
 }
 
+function BulletList({
+  items,
+  compact = false,
+}: {
+  items: string[];
+  compact?: boolean;
+}) {
+  return (
+    <div
+      role="list"
+      className={compact ? "space-y-2 text-gray-300" : "space-y-4 text-gray-300"}
+    >
+      {items.map((item) => (
+        <div key={item} role="listitem" className="flex gap-3 leading-7">
+          <span aria-hidden="true" className="mt-[1px] text-blue-400">
+            •
+          </span>
+          <span>{item}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function TagList({ tags }: { tags: string[] }) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <span
+          key={tag}
+          className="rounded-full border border-blue-900 px-3 py-1 text-sm text-blue-300"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#020817] text-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between border-b border-blue-950 px-6 py-7">
-        <a href="#" className="text-3xl font-bold text-blue-400">
-          Damian.IT
-        </a>
-
-        <div className="hidden gap-7 text-sm text-gray-300 lg:flex">
-          <a href="#about" className="transition hover:text-blue-400">
-            O mnie
+      <nav className="border-b border-blue-950 px-6 py-7">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <a href="#" className="text-3xl font-bold text-blue-400">
+            Damian.IT
           </a>
+
+          <div className="hidden gap-7 text-sm text-gray-300 lg:flex">
+            <a href="#about" className="transition hover:text-blue-400">
+              O mnie
+            </a>
+            <a href="#skills" className="transition hover:text-blue-400">
+              Kompetencje
+            </a>
+            <a href="#operations" className="transition hover:text-blue-400">
+              IT Operations
+            </a>
+            <a href="#experience" className="transition hover:text-blue-400">
+              Doświadczenie
+            </a>
+            <a href="#projects" className="transition hover:text-blue-400">
+              Projekty
+            </a>
+            <a href="#development" className="transition hover:text-blue-400">
+              Rozwój
+            </a>
+            <a href="#contact" className="transition hover:text-blue-400">
+              Kontakt
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-5 flex max-w-7xl flex-wrap gap-4 text-sm text-gray-300 lg:hidden">
           <a href="#skills" className="transition hover:text-blue-400">
             Kompetencje
-          </a>
-          <a href="#operations" className="transition hover:text-blue-400">
-            IT Operations
           </a>
           <a href="#experience" className="transition hover:text-blue-400">
             Doświadczenie
           </a>
           <a href="#projects" className="transition hover:text-blue-400">
             Projekty
-          </a>
-          <a href="#development" className="transition hover:text-blue-400">
-            Rozwój
           </a>
           <a href="#contact" className="transition hover:text-blue-400">
             Kontakt
@@ -295,7 +406,7 @@ export default function Home() {
           </h1>
 
           <h2 className="mb-8 text-2xl font-semibold text-blue-400 md:text-3xl">
-            IT Systems Support Specialist
+            IT Systems Support Specialist / IT Operations Support
           </h2>
 
           <p className="max-w-5xl text-xl leading-9 text-gray-300">
@@ -355,7 +466,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Profil zawodowy"
           title="Operacyjne IT, nie tylko klasyczny helpdesk"
-          description="Moje doświadczenie łączy Service Desk, IT Operations, monitoring, obsługę incydentów, wsparcie użytkowników, elementy administracji Windows Server / Active Directory oraz pracę z danymi i automatyzacją."
+          description="Doświadczenie łączące Service Desk, IT Operations, monitoring, obsługę incydentów, wsparcie użytkowników, elementy administracji Windows Server / Active Directory oraz pracę z danymi i automatyzacją."
         />
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -365,38 +476,38 @@ export default function Home() {
             </h3>
 
             <p className="leading-8 text-gray-300">
-            Wspieram środowisko produkcyjne działające w trybie 24/7. Zajmuję
-            się analizą zgłoszeń, nadawaniem priorytetów, obsługą incydentów,
-            monitorowaniem alertów, eskalacją problemów oraz komunikacją z
-            zespołami technicznymi i dostawcami.
+              Wspieram środowisko produkcyjne działające w trybie 24/7. Zajmuję
+              się analizą zgłoszeń, nadawaniem priorytetów, obsługą incydentów,
+              monitorowaniem alertów, eskalacją problemów oraz komunikacją z
+              zespołami technicznymi i dostawcami.
             </p>
 
             <p className="mt-5 leading-8 text-gray-300">
-            Największą wartość wnoszę tam, gdzie trzeba szybko ocenić wpływ
-            problemu na biznes, nadać właściwy priorytet, skoordynować eskalację
-            i dopilnować ciągłości działania systemów.
+              Największą wartość wnoszę tam, gdzie trzeba szybko ocenić wpływ
+              problemu na biznes, nadać właściwy priorytet, skoordynować
+              eskalację i dopilnować ciągłości działania systemów.
             </p>
           </div>
 
           <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
             <h3 className="mb-4 text-2xl font-bold text-blue-400">
-             Kierunek zawodowy
-           </h3>
+              Kierunek zawodowy
+            </h3>
 
-           <p className="leading-8 text-gray-300">
-           Rozwijam się w stronę ról IT Support L2, IT Operations
-           Specialist, Junior Windows Administrator i Junior System
-           Administrator. Szczególnie interesują mnie Windows Server, Active
-           Directory, monitoring, SQL, PowerShell, Microsoft 365, Azure / Entra ID
-           oraz automatyzacja pracy IT.
-          </p>
+            <p className="leading-8 text-gray-300">
+              Rozwijam się w stronę ról IT Support L2, IT Operations
+              Specialist, Junior Windows Administrator i Junior System
+              Administrator. Szczególnie interesują mnie Windows Server, Active
+              Directory, monitoring, SQL, PowerShell, Microsoft 365, Azure /
+              Entra ID oraz automatyzacja pracy IT.
+            </p>
 
-         <p className="mt-5 leading-8 text-gray-300">
-        Chcę rozwijać się bliżej administracji systemami, infrastruktury,
-        diagnostyki, automatyzacji i utrzymania środowisk produkcyjnych,
-        wykorzystując doświadczenie zdobyte we wsparciu użytkowników i obsłudze
-        incydentów.
-</p>
+            <p className="mt-5 leading-8 text-gray-300">
+              Chcę rozwijać się bliżej administracji systemami, infrastruktury,
+              diagnostyki, automatyzacji i utrzymania środowisk produkcyjnych,
+              wykorzystując doświadczenie zdobyte we wsparciu użytkowników i
+              obsłudze incydentów.
+            </p>
           </div>
         </div>
       </section>
@@ -405,7 +516,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Kompetencje"
           title="Technologie i obszary pracy"
-          description="Poniżej nie ma przypadkowej listy narzędzi. To obszary, z którymi realnie pracuję albo które rozwijam pod role L2, IT Operations i Junior Windows Administrator."
+          description="Kluczowe technologie i obszary, z którymi pracuję lub które rozwijam pod role IT Support L2, IT Operations i Junior Windows Administrator."
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -424,7 +535,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Specjalizacja"
           title="Najważniejsze obszary odpowiedzialności"
-          description="To sekcja, która rozwija klasyczne CV. Pokazuje, co konkretnie robię operacyjnie i gdzie mam praktyczne doświadczenie."
+          description="Kluczowe obszary mojej pracy operacyjnej: incydenty, monitoring, Windows Server, Active Directory, SQL, automatyzacja i komunikacja z zespołami technicznymi."
         />
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -447,43 +558,49 @@ export default function Home() {
         <SectionTitle
           eyebrow="Doświadczenie"
           title="Doświadczenie zawodowe IT"
-          description="Najważniejsza część profilu. Skupia się na skali środowisk, typie problemów, odpowiedzialności operacyjnej i technologiach."
+          description="Skala środowisk, zakres odpowiedzialności operacyjnej oraz technologie wykorzystywane w codziennej pracy IT."
         />
 
         <div className="space-y-10">
-          {experience.map((job) => {
-            const columns = splitIntoColumns(job.bullets);
-
-            return (
-              <article
-                key={`${job.company}-${job.period}`}
-                className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
-              >
-                <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
-                  <div>
-                    <h3 className="text-3xl font-bold">{job.role}</h3>
-                    <p className="mt-2 text-xl font-semibold text-blue-400">
-                      {job.company}
-                    </p>
-                  </div>
-
-                  <div className="text-left text-gray-400 lg:text-right">
-                    <p>{job.period}</p>
-                    <p>{job.location}</p>
-                  </div>
+          {experience.map((job) => (
+            <article
+              key={`${job.company}-${job.period}`}
+              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
+            >
+              <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+                <div>
+                  <h3 className="text-3xl font-bold">{job.role}</h3>
+                  <p className="mt-2 text-xl font-semibold text-blue-400">
+                    {job.company}
+                  </p>
                 </div>
 
-                <p className="mb-8 max-w-4xl leading-8 text-gray-300">
-                  {job.description}
-                </p>
-
-                <div className="grid gap-4 lg:grid-cols-2 lg:gap-10">
-                  <BulletList items={columns.left} />
-                  <BulletList items={columns.right} />
+                <div className="text-left text-gray-400 lg:text-right">
+                  <p>{job.period}</p>
+                  <p>{job.location}</p>
                 </div>
-              </article>
-            );
-          })}
+              </div>
+
+              <p className="mb-8 max-w-4xl leading-8 text-gray-300">
+                {job.description}
+              </p>
+
+              <div className="grid gap-6 lg:grid-cols-2">
+                {job.groups.map((group) => (
+                  <div
+                    key={group.title}
+                    className="rounded-xl border border-blue-950 bg-[#020817] p-6"
+                  >
+                    <h4 className="mb-4 text-lg font-bold text-blue-400">
+                      {group.title}
+                    </h4>
+
+                    <BulletList items={group.items} compact />
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -491,7 +608,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Projekty"
           title="Projekty techniczne i dodatkowe doświadczenie"
-          description="Ta część ma uzupełniać CV. Pokazuje praktyczne działania poza samym opisem stanowiska: automatyzację, Home Lab, e-commerce, wsparcie małego środowiska biurowego i rozwój portfolio."
+          description="Wybrane projekty i działania techniczne pokazujące praktyczne doświadczenie poza samym opisem stanowiska."
         />
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -500,23 +617,37 @@ export default function Home() {
               key={project.title}
               className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
             >
-              <h3 className="mb-4 text-2xl font-bold text-blue-400">
+              <h3 className="mb-5 text-2xl font-bold text-blue-400">
                 {project.title}
               </h3>
 
-              <p className="mb-6 leading-8 text-gray-300">{project.text}</p>
+              <div className="space-y-5 text-gray-300">
+                <div>
+                  <p className="mb-1 font-semibold text-white">
+                    Kontekst / problem
+                  </p>
+                  <p className="leading-8">{project.context}</p>
+                </div>
 
-              <BulletList items={project.points} />
+                <div>
+                  <p className="mb-1 font-semibold text-white">Moja rola</p>
+                  <p className="leading-8">{project.role}</p>
+                </div>
 
-              <div className="mt-6 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-blue-900 px-3 py-1 text-sm text-blue-300"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                <div>
+                  <p className="mb-1 font-semibold text-white">
+                    Efekt / wartość
+                  </p>
+                  <p className="leading-8">{project.effect}</p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <BulletList items={project.points} compact />
+              </div>
+
+              <div className="mt-6">
+                <TagList tags={project.tags} />
               </div>
             </article>
           ))}
@@ -527,7 +658,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Rozwój"
           title="Kierunek techniczny"
-          description="Aktualnie rozwijam obszary potrzebne do przejścia z klasycznego wsparcia IT w stronę L2, IT Operations i administracji systemami Windows: Windows Server, Active Directory, Microsoft 365, Azure / Entra ID, PowerShell, SQL, monitoring oraz automatyzację pracy Service Desk."
+          description="Aktualnie rozwijam obszary potrzebne do ról L2, IT Operations i administracji systemami Windows: Windows Server, Active Directory, Microsoft 365, Azure / Entra ID, PowerShell, SQL, monitoring oraz automatyzację pracy Service Desk."
         />
 
         <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
@@ -552,7 +683,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Kontakt"
           title="Porozmawiajmy o współpracy"
-          description="Interesują mnie role IT Support L2, IT Operations Specialist, Junior Windows Administrator oraz Junior System Administrator - zdalnie, hybrydowo w Lublinie albo w modelu ustalanym indywidualnie."
+          description="Interesują mnie role IT Support L2, IT Operations Specialist, Junior Windows Administrator oraz Junior System Administrator — zdalnie, hybrydowo w Lublinie albo w modelu ustalanym indywidualnie."
         />
 
         <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
@@ -560,7 +691,7 @@ export default function Home() {
             <div>
               <p className="text-2xl font-bold">Damian Szymczak</p>
               <p className="mt-2 text-blue-400">
-                IT Systems Support Specialist
+                IT Systems Support Specialist / IT Operations Support
               </p>
 
               <div className="mt-8 space-y-3 text-gray-300">
@@ -576,11 +707,9 @@ export default function Home() {
 
                 <p>Telefon: 733-878-717</p>
                 <p>
-                  Lokalizacja: Lublin / zdalnie - cała Polska / hybrydowo -
+                  Lokalizacja: Lublin / zdalnie — cała Polska / hybrydowo —
                   Lublin
                 </p>
-                <p>LinkedIn: w przygotowaniu</p>
-                <p>GitHub: w przygotowaniu</p>
               </div>
             </div>
 
@@ -591,11 +720,12 @@ export default function Home() {
 
               <BulletList
                 items={[
-                  "Klasyczne CV do pobrania w PDF.",
+                  "CV w PDF do pobrania.",
                   "Rozszerzony profil techniczny na tej stronie.",
-                  "Projekty techniczne i Home Lab.",
-                  "Sekcja AI / Service Desk / Knowledge Base.",
+                  "Projekty techniczne, Home Lab i doświadczenie operacyjne.",
+                  "Sekcje AI / Service Desk / Knowledge Base / SQL.",
                 ]}
+                compact
               />
 
               <a
@@ -612,7 +742,7 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-blue-950 px-6 py-8 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Damian Szymczak - IT Portfolio
+        © {new Date().getFullYear()} Damian Szymczak — IT Portfolio
       </footer>
     </main>
   );
