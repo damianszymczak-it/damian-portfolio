@@ -365,16 +365,16 @@ export default function Home() {
             </h3>
 
             <p className="leading-8 text-gray-300">
-              Wspieram środowisko produkcyjne działające w trybie 24/7. Zajmuję
-              się analizą zgłoszeń, nadawaniem priorytetów, obsługą incydentów,
-              monitorowaniem alertów, eskalacją problemów oraz komunikacją z
-              zespołami technicznymi i dostawcami.
+            Wspieram środowisko produkcyjne działające w trybie 24/7. Zajmuję
+            się analizą zgłoszeń, nadawaniem priorytetów, obsługą incydentów,
+            monitorowaniem alertów, eskalacją problemów oraz komunikacją z
+            zespołami technicznymi i dostawcami.
             </p>
 
             <p className="mt-5 leading-8 text-gray-300">
-              Największą wartość daję tam, gdzie liczy się szybka ocena
-              sytuacji, wpływ biznesowy, poprawne przekazanie problemu dalej i
-              utrzymanie ciągłości działania systemów.
+            Największą wartość wnoszę tam, gdzie trzeba szybko ocenić wpływ
+            problemu na biznes, nadać właściwy priorytet, skoordynować eskalację
+            i dopilnować ciągłości działania systemów.
             </p>
           </div>
 
@@ -391,11 +391,11 @@ export default function Home() {
            oraz automatyzacja pracy IT.
           </p>
 
-<p className="mt-5 leading-8 text-gray-300">
-  Chcę rozwijać się bliżej administracji systemami, infrastruktury,
-  diagnostyki, automatyzacji i utrzymania środowisk produkcyjnych,
-  wykorzystując doświadczenie zdobyte we wsparciu użytkowników i obsłudze
-  incydentów.
+         <p className="mt-5 leading-8 text-gray-300">
+        Chcę rozwijać się bliżej administracji systemami, infrastruktury,
+        diagnostyki, automatyzacji i utrzymania środowisk produkcyjnych,
+        wykorzystując doświadczenie zdobyte we wsparciu użytkowników i obsłudze
+        incydentów.
 </p>
           </div>
         </div>
