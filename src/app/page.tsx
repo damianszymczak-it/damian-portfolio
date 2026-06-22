@@ -380,22 +380,23 @@ export default function Home() {
 
           <div className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8">
             <h3 className="mb-4 text-2xl font-bold text-blue-400">
-              Kierunek zawodowy
-            </h3>
+             Kierunek zawodowy
+           </h3>
 
-            <p className="leading-8 text-gray-300">
-              Rozwijam się w stronę ról IT Support L2, IT Operations
-              Specialist, Junior Windows Administrator i Junior System
-              Administrator. Mocno stawiam na Windows Server, Active Directory,
-              monitoring, SQL, PowerShell, Microsoft 365, Azure / Entra ID oraz
-              automatyzację pracy IT.
-            </p>
+           <p className="leading-8 text-gray-300">
+           Rozwijam się w stronę ról IT Support L2, IT Operations
+           Specialist, Junior Windows Administrator i Junior System
+           Administrator. Szczególnie interesują mnie Windows Server, Active
+           Directory, monitoring, SQL, PowerShell, Microsoft 365, Azure / Entra ID
+           oraz automatyzacja pracy IT.
+          </p>
 
-            <p className="mt-5 leading-8 text-gray-300">
-              Chcę pracować bliżej administracji systemami, infrastruktury,
-              automatyzacji i utrzymania środowisk produkcyjnych niż klasycznej
-              obsługi pierwszej linii.
-            </p>
+<p className="mt-5 leading-8 text-gray-300">
+  Chcę rozwijać się bliżej administracji systemami, infrastruktury,
+  diagnostyki, automatyzacji i utrzymania środowisk produkcyjnych,
+  wykorzystując doświadczenie zdobyte we wsparciu użytkowników i obsłudze
+  incydentów.
+</p>
           </div>
         </div>
       </section>
