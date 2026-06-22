@@ -509,21 +509,31 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20 lg:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-16 lg:py-28">
         <div>
-          <p className="mb-5 max-w-3xl text-sm font-semibold uppercase leading-7 tracking-[4px] text-blue-400 sm:text-base md:text-lg">
-            IT Support L2 / IT Operations / Junior Windows Administrator
+          <p className="mb-5 max-w-3xl text-xs font-semibold uppercase leading-6 tracking-[3px] text-blue-400 sm:text-base sm:leading-7 md:text-lg">
+            <span className="sm:hidden">IT Support L2 / IT Operations</span>
+            <span className="hidden sm:inline">
+              IT Support L2 / IT Operations / Junior Windows Administrator
+            </span>
           </p>
 
-          <h1 className="mb-5 text-5xl font-extrabold leading-tight sm:text-6xl md:text-7xl">
+          <h1 className="mb-5 text-4xl font-extrabold leading-tight sm:text-6xl md:text-7xl">
             Damian Szymczak
           </h1>
 
-          <h2 className="mb-8 text-2xl font-semibold leading-snug text-blue-400 sm:text-3xl">
+          <h2 className="mb-6 text-xl font-semibold leading-snug text-blue-400 sm:text-3xl">
             IT Systems Support Specialist / IT Operations Support
           </h2>
 
-          <p className="max-w-5xl text-lg leading-8 text-gray-300 sm:text-xl sm:leading-9">
+          <p className="max-w-5xl text-base leading-7 text-gray-300 sm:hidden">
+            Specjalista IT z ponad 4 latami doświadczenia w środowiskach 24/7.
+            Pracuję przy obsłudze sieci 520+ stacji, incydentach P1-P4,
+            monitoringu, Windows Server, Active Directory, SQL oraz rozwoju AI /
+            voice-bota dla Service Desk.
+          </p>
+
+          <p className="hidden max-w-5xl text-xl leading-9 text-gray-300 sm:block">
             Specjalista IT z ponad 4 latami doświadczenia we wsparciu dużych,
             rozproszonych środowisk IT. Obecnie pracuję przy utrzymaniu
             środowiska 24/7 dla ogólnopolskiej sieci 520+ stacji, obsługując
@@ -533,7 +543,7 @@ export default function Home() {
             systemów oraz automatyzację Service Desk z użyciem AI / voice-bota.
           </p>
 
-          <div className="mt-10 grid gap-4 sm:flex sm:flex-wrap">
+          <div className="mt-8 grid gap-3 sm:mt-10 sm:flex sm:flex-wrap sm:gap-4">
             <a
               href="#contact"
               className="rounded-xl bg-blue-600 px-8 py-4 text-center font-semibold transition hover:bg-blue-700"
@@ -576,7 +586,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
+      <section
+        id="about"
+        className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20"
+      >
         <SectionTitle
           eyebrow="Profil zawodowy"
           title="Operacyjne IT, nie tylko klasyczny helpdesk"
@@ -626,7 +639,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
+      <section
+        id="skills"
+        className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20"
+      >
         <SectionTitle
           eyebrow="Kompetencje"
           title="Technologie i obszary pracy"
@@ -651,7 +667,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="operations" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
+      <section
+        id="operations"
+        className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20"
+      >
         <SectionTitle
           eyebrow="Specjalizacja"
           title="Najważniejsze obszary odpowiedzialności"
@@ -674,7 +693,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experience" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
+      <section
+        id="experience"
+        className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20"
+      >
         <SectionTitle
           eyebrow="Doświadczenie"
           title="Doświadczenie zawodowe IT"
@@ -727,7 +749,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
+      <section
+        id="projects"
+        className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20"
+      >
         <SectionTitle
           eyebrow="Projekty"
           title="Projekty techniczne i dodatkowe doświadczenie"
@@ -780,7 +805,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="development" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
+      <section
+        id="development"
+        className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20"
+      >
         <SectionTitle
           eyebrow="Rozwój"
           title="Kierunek techniczny"
@@ -803,7 +831,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20">
+      <section
+        id="contact"
+        className="mx-auto max-w-7xl px-5 py-14 sm:px-6 sm:py-20"
+      >
         <SectionTitle
           eyebrow="Kontakt"
           title="Porozmawiajmy o współpracy"
