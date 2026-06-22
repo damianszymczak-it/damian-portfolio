@@ -201,6 +201,28 @@ const developmentAreas = [
   "Język angielski techniczny",
 ];
 
+function splitIntoColumns(items: string[]) {
+  const midpoint = Math.ceil(items.length / 2);
+
+  return {
+    left: items.slice(0, midpoint),
+    right: items.slice(midpoint),
+  };
+}
+
+function BulletList({ items }: { items: string[] }) {
+  return (
+    <ul className="list-none space-y-4 text-gray-300">
+      {items.map((item) => (
+        <li key={item} className="flex gap-2 leading-7">
+          <span className="mt-[1px] text-blue-400">•</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function SectionTitle({
   eyebrow,
   title,
@@ -412,13 +434,7 @@ export default function Home() {
                 {group.title}
               </h3>
 
-              <ul className="list-none space-y-3 text-gray-300">
-                {group.items.map((item) => (
-                  <li key={item} className="leading-7">
-                    <span className="text-blue-400">•</span> {item}
-                  </li>
-                ))}
-              </ul>
+              <BulletList items={group.items} />
             </div>
           ))}
         </div>
@@ -432,38 +448,39 @@ export default function Home() {
         />
 
         <div className="space-y-10">
-          {experience.map((job) => (
-            <article
-              key={`${job.company}-${job.period}`}
-              className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
-            >
-              <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
-                <div>
-                  <h3 className="text-3xl font-bold">{job.role}</h3>
-                  <p className="mt-2 text-xl font-semibold text-blue-400">
-                    {job.company}
-                  </p>
+          {experience.map((job) => {
+            const columns = splitIntoColumns(job.bullets);
+
+            return (
+              <article
+                key={`${job.company}-${job.period}`}
+                className="rounded-2xl border border-blue-950 bg-blue-950/10 p-8"
+              >
+                <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+                  <div>
+                    <h3 className="text-3xl font-bold">{job.role}</h3>
+                    <p className="mt-2 text-xl font-semibold text-blue-400">
+                      {job.company}
+                    </p>
+                  </div>
+
+                  <div className="text-left text-gray-400 lg:text-right">
+                    <p>{job.period}</p>
+                    <p>{job.location}</p>
+                  </div>
                 </div>
 
-                <div className="text-left text-gray-400 lg:text-right">
-                  <p>{job.period}</p>
-                  <p>{job.location}</p>
+                <p className="mb-8 max-w-4xl leading-8 text-gray-300">
+                  {job.description}
+                </p>
+
+                <div className="grid gap-4 lg:grid-cols-2 lg:gap-10">
+                  <BulletList items={columns.left} />
+                  <BulletList items={columns.right} />
                 </div>
-              </div>
-
-              <p className="mb-6 max-w-4xl leading-8 text-gray-300">
-                {job.description}
-              </p>
-
-              <ul className="grid list-none gap-3 text-gray-300 lg:grid-cols-2">
-                {job.bullets.map((bullet) => (
-                  <li key={bullet} className="leading-7">
-                    <span className="text-blue-400">•</span> {bullet}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </section>
 
@@ -486,15 +503,9 @@ export default function Home() {
 
               <p className="mb-6 leading-8 text-gray-300">{project.text}</p>
 
-              <ul className="mb-6 list-none space-y-2 text-gray-300">
-                {project.points.map((point) => (
-                  <li key={point} className="leading-7">
-                    <span className="text-blue-400">•</span> {point}
-                  </li>
-                ))}
-              </ul>
+              <BulletList items={project.points} />
 
-              <div className="flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
@@ -575,24 +586,14 @@ export default function Home() {
                 Dostępne materiały
               </h3>
 
-              <ul className="list-none space-y-3 text-gray-300">
-                <li>
-                  <span className="text-blue-400">•</span> Klasyczne CV do
-                  pobrania w PDF
-                </li>
-                <li>
-                  <span className="text-blue-400">•</span> Rozszerzony profil
-                  techniczny na tej stronie
-                </li>
-                <li>
-                  <span className="text-blue-400">•</span> Projekty techniczne
-                  i Home Lab
-                </li>
-                <li>
-                  <span className="text-blue-400">•</span> Sekcja AI / Service
-                  Desk / Knowledge Base
-                </li>
-              </ul>
+              <BulletList
+                items={[
+                  "Klasyczne CV do pobrania w PDF.",
+                  "Rozszerzony profil techniczny na tej stronie.",
+                  "Projekty techniczne i Home Lab.",
+                  "Sekcja AI / Service Desk / Knowledge Base.",
+                ]}
+              />
 
               <a
                 href="/Damian_Szymczak_CV.pdf"
