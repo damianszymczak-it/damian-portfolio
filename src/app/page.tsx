@@ -299,12 +299,11 @@ export default function Home() {
           </h2>
 
           <p className="max-w-4xl text-xl leading-9 text-gray-300">
-          Specjalista IT z ponad 4 latami doświadczenia w środowiskach
-          produkcyjnych 24/7. Obsługuję incydenty P1-P4, monitoring,
-          eskalacje, Windows Server, Active Directory, SQL oraz procesy
-          automatyzacji Service Desk z użyciem AI / voice-bota. Najlepiej
-          odnajduję się tam, gdzie liczy się szybka diagnoza, priorytetyzacja
-          i utrzymanie ciągłości działania systemów.
+          Specjalista IT z ponad 4 latami doświadczenia w środowiskach produkcyjnych
+          24/7. Obsługuję incydenty P1-P4, monitoring, eskalacje, Windows Server,
+          Active Directory, SQL oraz procesy automatyzacji Service Desk z użyciem AI /
+          voice-bota. Moje doświadczenie łączy wsparcie użytkowników, IT Operations i
+          podstawy administracji systemami Windows.
          </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
